@@ -8,11 +8,21 @@ public class Gradina {
     public double suprafata;
     private final double unitateMarireSuprafata = 100;
 
-    public Gradina(){
+    private static Gradina _instance;
+
+    private Gradina(){
         this.plante = new Planta[10];
         this.nrPlante = 0;
         this.capacitate = 10;
         this.suprafata = 100;
+    }
+
+    public static Gradina getInstance(){
+        if(_instance == null){
+            _instance = new Gradina();
+        }
+
+        return _instance;
     }
 
     public Gradina(int capacitate, double suprafata){
@@ -62,7 +72,7 @@ public class Gradina {
     }
 
     public static void main(String Args[]){
-        Gradina gradina = new Gradina(10, 100);
+        Gradina gradina = Gradina.getInstance();
         Planta planta1 = new Planta("Trandafir", "Rosu", 1, 1);
         Planta planta2 = new Planta("Lalea", "Galben", 1, 1);
         Planta planta3 = new Planta("Lalea", "Rosu", 1, 1);
