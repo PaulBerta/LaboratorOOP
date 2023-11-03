@@ -19,6 +19,12 @@ public class WorkoutSession {
         this.caloriesBurned = caloriesBurned;
     }
 
+    public WorkoutSession(double duration, double caloriesBurned, String date) {
+        this.duration = duration;
+        this.caloriesBurned = caloriesBurned;
+        this.date = date;
+    }
+
     public int getSessionID() {
         return sessionID;
     }
