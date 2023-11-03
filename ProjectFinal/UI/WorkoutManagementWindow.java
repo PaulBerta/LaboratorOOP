@@ -39,6 +39,10 @@ public class WorkoutManagementWindow {
         String workoutName = workoutNameField.getText().trim();
         String workoutType = (String) workoutTypeDropdown.getSelectedItem();
 
+        if(workoutName.isEmpty())
+            JOptionPane.showMessageDialog(frame, "Please provide a workout name!", "Error", JOptionPane.ERROR_MESSAGE);
+        
+
         if(!workoutName.isEmpty()) {
             Workout workout;
             switch(workoutType) {

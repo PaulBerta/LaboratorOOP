@@ -58,7 +58,16 @@ public class UserManagementWindow {
         double age = Double.parseDouble(ageField.getText());
         double weight = Double.parseDouble(weightField.getText());
 
-        
+        if(username.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(frame, "Username and password must be filled out!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if(age <= 8 || weight <= 30) {
+            JOptionPane.showMessageDialog(frame, "Age and weight must be greater than 0!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         User user = new User(0, username, password, age, weight);
         trainingManager.addUser(user);
 
