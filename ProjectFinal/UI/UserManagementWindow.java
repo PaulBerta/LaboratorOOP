@@ -69,5 +69,9 @@ public class UserManagementWindow {
         frame.setVisible(visible);
     }
 
+    public static void main(String[] args) {
+        new UserManagementWindow().setVisible(true);
+    }
+
 
 }

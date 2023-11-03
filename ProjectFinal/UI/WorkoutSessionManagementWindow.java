@@ -74,4 +74,8 @@ public class WorkoutSessionManagementWindow {
     public void setVisible(boolean visible) {
         frame.setVisible(visible);
     }
+
+    public static void main(String[] args) {
+        new WorkoutSessionManagementWindow().setVisible(true);
+    }
 }
