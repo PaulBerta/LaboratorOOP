@@ -64,7 +64,7 @@ public class UserManagementWindow {
         }
 
         if(age <= 8 || weight <= 30) {
-            JOptionPane.showMessageDialog(frame, "Age and weight must be greater than 0!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, "Age or/and weight invalid!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
