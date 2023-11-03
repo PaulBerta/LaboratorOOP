@@ -29,7 +29,7 @@ public class WorkoutSessionDAO {
     }
 
     public List<WorkoutSession> getSessionsForUser(int userID) {
-        String sql = "SELECT * FROM WorkoutSession WHERE userID = ?";
+        String sql = "SELECT * FROM WorkoutSession WHERE id = ?";
         List<WorkoutSession> sessions = new ArrayList<>();
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -74,7 +74,7 @@ public class WorkoutSessionDAO {
     }
 
     public void deleteSession(int sessionID) {
-        String sql = "DELETE FROM WorkoutSession WHERE sessionID = ?";
+        String sql = "DELETE FROM WorkoutSession WHERE id = ?";
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, sessionID);

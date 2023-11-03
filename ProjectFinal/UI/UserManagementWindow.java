@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Database.UserDAO;
 import Models.User;
 import Service.TrainingManager;
 

@@ -48,7 +48,7 @@ public class WorkoutDAO {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            e.printStackTrace(); // This will give you a more detailed error trace.
+            e.printStackTrace();
         }
         return workouts;
     }
@@ -68,7 +68,7 @@ public class WorkoutDAO {
     }
 
     public void deleteWorkout(int workoutID) {
-        String sql = "DELETE FROM Workouts WHERE workoutID = ?";
+        String sql = "DELETE FROM Workouts WHERE id = ?";
         try (Connection conn = DatabaseManager.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, workoutID);
