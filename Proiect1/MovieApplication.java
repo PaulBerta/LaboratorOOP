@@ -2,7 +2,9 @@ package Proiect1;
 
 import java.util.Scanner;
 
+//The engine of the project
 public class MovieApplication {
+    //Core method of the program
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -26,9 +28,9 @@ public class MovieApplication {
                     Movie m2 = new Movie("Lord Of The Rings", 9.5);
                     Movie m3 = new Movie("Fast and Furious 10", 6.1);
 
-                    MovieManager.movies.add(m1);
-                    MovieManager.movies.add(m2);
-                    MovieManager.movies.add(m3);
+                    MovieManager.AddMovieToManager(m1);
+                    MovieManager.AddMovieToManager(m2);
+                    MovieManager.AddMovieToManager(m3);
 
                     for (Movie apreciatMovie : MovieManager.GetMostAppreciatedMoveies()) {
                         System.out.println(apreciatMovie.toString());
@@ -41,7 +43,7 @@ public class MovieApplication {
                     Double ratingFilmNou = scanner.nextDouble();
                     Movie newMovie = new Movie(numeFilmNou, ratingFilmNou);
                     
-                    MovieManager.movies.add(newMovie);
+                    MovieManager.AddMovieToManager(newMovie);
 
                     break;
                 }
